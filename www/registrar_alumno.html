@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Listview - jQuery Mobile Demos</title>
+	<link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+	<link rel="stylesheet" href="jqm/demos/css/themes/default/jquery.mobile-1.4.5.min.css">
+	
+	<script src="jqm/demos/js/jquery.js"></script>
+	<script src="jqm/demos/_assets/js/index.js"></script>
+	<script src="jqm/demos/js/jquery.mobile-1.4.5.min.js"></script>
+
+	<style id="custom-icon">
+        .ui-icon-custom:after {
+			background-image: url("jqm/demos/_assets/img/glyphish-icons/21-skull.png");
+			background-position: 3px 3px;
+			background-size: 70%;
+		}
+    </style>
+
+    
+    <link rel="stylesheet" href="jqm/demos/_assets/css/jqm-demos.css">
+</head>
+<body>
+	<div data-role="page" id="pageone">
+		<div data-role="panel" id="myPanel"> 
+			<h2>Menu principal <a href="#myPanel" class="ui-btn ui-btn-inline ui-corner-all ui-shadow ui-corner-all ui-icon-delete ui-btn-icon-notext ui-btn-b">Open Panel</a></h2>
+			<div role="main" class="ui-content jqm-content">
+	    		<ul data-role="listview">
+					<li><a href="index.html">Bandeja de entrada</a></li>
+			    	<li><a href="editar_alumnos.html">Editar Alumno</a></li>
+	   			</ul>
+  			</div> 
+   		</div> 
+
+		<div data-role="main" class="ui-content">
+			<div role="main" class="ui-content jqm-content">
+				<h2 class="bandeja_entrada">Registrar Alumno <a href="#myPanel" class="flotante ui-btn ui-btn-inline ui-corner-all ui-shadow ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b">Open Panel</a></h2>
+				<label for="text-basic" id="label_alumno">Alumno:</label>
+				<input type="text" name="alumno" id="alumno" value="" placeholder="ingrese alumno">
+				<label for="text-basic" id="label_codigo">Codigo:</label>
+				<input type="text" name="codigo" id="codigo" value="">
+				<button class="ui-shadow ui-btn ui-corner-all" id="agregar_alumno">Agregar Alumno</button>			
+  		</div>
+	</div> 
+	
+		<script src="js/registrar_alumno.js"></script>
+</body>
+</html>
