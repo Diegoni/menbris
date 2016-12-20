@@ -13,7 +13,7 @@
 	<script src="jqm/demos/_assets/js/index.js"></script>
 	<script src="jqm/demos/js/jquery.mobile-1.4.5.min.js"></script>
 	
-	<script src="js/ajax.js"></script>
+	<script src="js/registrar_mensaje.js"></script>
 	<style id="custom-icon">
         .ui-icon-custom:after {
 			background-image: url("jqm/demos/_assets/img/glyphish-icons/21-skull.png");
@@ -36,19 +36,20 @@
 
 		<div data-role="main" class="ui-content">
 			<div role="main" class="ui-content jqm-content">
-				<h2 class="bandeja_entrada">Bandeja de entrada <a href="#myPanel" class="flotante ui-btn ui-btn-inline ui-corner-all ui-shadow ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b">Open Panel</a></h2>
-				<ul data-role="listview" data-inset="true" class="lista">
-				</ul>
+				<h2 class="bandeja_entrada">Generar mensaje <a href="#myPanel" class="flotante ui-btn ui-btn-inline ui-corner-all ui-shadow ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b">Open Panel</a></h2>
 				
-				<div id="div_mensaje">
-					<a href="index.html" onclick="mostraLista()" class="ui-btn ui-btn-icon-left ui-icon-carat-l">
-						<h2 id="titulo">Titulo</h2>
-						<p id="mensaje"><strong>Mensaje</strong></p>
-						<p id="curso">curso</p>
-						<p id="profesor">profesor</p>
-						<p id="fecha">fecha</p>
-					</a>
-				</div>
+				<label for="select-choice-0" class="select">Seleccione Curso:</label>
+				<select name="select-choice-0" id="curso" onchange="getAlumnos(this.value)">
+
+				</select>
+				
+				<form>
+				<ul data-role="listview" data-inset="true" id="alumnos">
+				</ul>
+				<a data-role="button" data-theme="b" name="aceptar" onclick="setMensaje()" id="aceptar">Aceptar</a> 
+				</form>
+				
+				
 			</div>
   		</div>
 	</div> 
