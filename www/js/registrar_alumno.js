@@ -4,8 +4,8 @@ $("#agregar_alumno").click(function() {
 	
 	$.ajax({
 		type: "POST",
-    	url: "http://www.menbris.com.ar/menbrisBack/index.php/Alumnos/agregarAlumno/"+alumno,
-	    //url: "http://localhost/benbrisBack/index.php/Alumnos/agregarAlumno/"+alumno, 
+    	//url: "http://www.menbris.com.ar/menbrisBack/index.php/Alumnos/agregarAlumno/"+alumno,
+	    url: "http://localhost/benbrisBack/index.php/Alumnos/agregarAlumno/"+alumno, 
 	    contentType: "application/json; charset=utf-8",
 	    dataType: "json",
 	    success: function(data) {

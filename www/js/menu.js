@@ -4,5 +4,5 @@ $(function() {
 	var editar_alumno 		= '<li><a href="editar_alumnos.html">Editar Alumno</a></li>';
 	var registrar_mensaje 	= '<li><a href="registrar_mensaje.html">Registrar Mensaje</a></li>';
 	
-	$(".menu").append(index+registrar_alumno+editar_alumno);
+	$(".menu").append(index+registrar_alumno+editar_alumno+registrar_mensaje);
 });     

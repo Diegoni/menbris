@@ -2,8 +2,8 @@ $(function() {
 	$("#div_mensaje").hide();
 	$.ajax({
 	    type:"GET", 
-	    url: "http://www.menbris.com.ar/menbrisBack/index.php/Mensajes/getMensajes/1",
-	    //url: "http://localhost/benbrisBack/index.php/Mensajes/getMensajes/1", 
+	    //url: "http://www.menbris.com.ar/menbrisBack/index.php/Mensajes/getMensajes/1",
+	   	url: "http://localhost/benbrisBack/index.php/Mensajes/getMensajes/1", 
 	    success: function(data) 
 	    {
 	    	$.each(data, function(index, element) {
@@ -30,8 +30,8 @@ function mostrarMensaje(id)
 	$("#div_mensaje").show(500);
 	$.ajax({
 	    type:"GET", 
-	    url: "http://www.menbris.com.ar/menbrisBack/index.php/Mensajes/getMensajes/1",
-	    //url: "http://localhost/benbrisBack/index.php/Mensajes/getMensaje/"+id_mensaje, 
+	    //url: "http://www.menbris.com.ar/menbrisBack/index.php/Mensajes/getMensajes/1",
+	    url: "http://localhost/benbrisBack/index.php/Mensajes/getMensaje/"+id_mensaje, 
 	    success: function(data) 
 	    {
 	    	$.each(data, function(index, element) {
@@ -64,6 +64,5 @@ function mostrarMensaje(id)
 function mostraLista()
 {
 	$(".lista").show(500);
-	$("#div_mensaje").hide(500);
-	
+	$("#div_mensaje").hide(500);	
 }
