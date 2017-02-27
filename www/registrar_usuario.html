@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Menbris</title>
+    <title>demo login jqm</title>
     <link rel="stylesheet"  href="jqm/demos/css/themes/default/jquery.mobile-1.4.5.min.css">
 	
     <script src="jqm/demos/js/jquery.js"></script>
     <script src="jqm/demos/js/jquery.mobile-1.4.5.min.js"></script>
     <script src="js/config.js"></script>
-    <script src="js/login.js"></script>
+    <script src="js/registrar_usuario.js"></script>
 </head>
 <body>
     <section id="login" data-role="page">
         <header data-role="header">
-            <h1>Login Cuaderno de comunicaciones</h1>
+            <h1>Registro usuario</h1>
         </header>
         <article data-role="content">
             <form id="form_login">
@@ -24,16 +24,18 @@
                 </div>
                 <div data-role="fieldcontain" class="ui-hide-label">
                     <label for="txtpassword">Contraseña:</label>
-                    <input type="password" name="txtpassword" id="txtpassword" value="" placeholder="Contraseña" />
+                    <input type="password" name="txtpass" id="txtpass" value="" placeholder="Contraseña" />
                 </div>
-                <select name="select-choice-0" id="txtperfil">
-					<option value"1">Padre</option>
-					<option value"2">Profesor</option>
-				</select>
-                <input type="button" value="Login" id="btnLogin">
-                <center>
-                <a href="registrar_usuario.html" type="button" id="btnRegistrar">Registrar</a>
-                </center>
+                
+                <div data-role="fieldcontain" class="ui-hide-label">
+                    <label for="select-choice-0" class="select">Perfil:</label>
+					<select name="select-choice-0" id="txtperfil">
+						<option value"1">Padre</option>
+						<option value"2">Profesor</option>
+					</select>
+				</div>
+                <input type="button" value="Aceptar" id="btnAceptar">
+                
             </form>
              <!--<div id="errorMsg" style="background-color:red;color: #FFFFFF;">Usuario o Contraseña no valida</div>-->
         </article>
@@ -44,7 +46,17 @@
             <h1>Error</h1>
         </header>
         <article data-role="content">
-            <p>Usuario o contraseña no valida</p>
+            <p>El usuario ya existe</p>
+            <a href="#" data-role="button" data-rel="back">Aceptar</a>
+        </article>
+    </section>
+    
+    <section id="pageErrorPass" data-role="dialog">
+        <header data-role="header">
+            <h1>Error</h1>
+        </header>
+        <article data-role="content">
+            <p>La constraseña debe tener al menos 4 números o letras</p>
             <a href="#" data-role="button" data-rel="back">Aceptar</a>
         </article>
     </section>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Listview - jQuery Mobile Demos</title>
+	<link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+	<link rel="stylesheet" href="../jqm/demos/css/themes/default/jquery.mobile-1.4.5.min.css">
+	
+	<script src="../jqm/demos/js/jquery.js"></script>
+	<script src="../js/config.js"></script>
+	<script src="../js/menu_padre.js"></script>
+	<script src="../jqm/demos/_assets/js/index.js"></script>
+	<script src="../jqm/demos/js/jquery.mobile-1.4.5.min.js"></script>
+	<script src="../js/config.js"></script>
+	<script src="../js/ajax.js"></script>
+	<style id="custom-icon">
+        .ui-icon-custom:after {
+			background-image: url("../jqm/demos/_assets/img/glyphish-icons/21-skull.png");
+			background-position: 3px 3px;
+			background-size: 70%;
+		}
+    </style>
+    
+    <link rel="stylesheet" href="../jqm/demos/_assets/css/jqm-demos.css">
+</head>
+<body>
+	<div data-role="page" id="pageone">
+		<div data-role="panel" id="myPanel"> 
+			<h2>Menu principal <a href="#myPanel" class="ui-btn ui-btn-inline ui-corner-all ui-shadow ui-corner-all ui-icon-delete ui-btn-icon-notext ui-btn-b">Open Panel</a></h2>
+			<div role="main" class="ui-content jqm-content">
+	    		<ul data-role="listview" class="menu">
+				</ul>
+  			</div> 
+   		</div> 
+
+		<div data-role="main" class="ui-content">
+			<div role="main" class="ui-content jqm-content">
+				<h2 class="bandeja_entrada">Bandeja de entrada <a href="#myPanel" class="flotante ui-btn ui-btn-inline ui-corner-all ui-shadow ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b">Open Panel</a></h2>
+				<ul data-role="listview" data-inset="true" class="lista">
+				</ul>
+				
+				<div id="div_mensaje">
+					<a href="index.html" onclick="mostraLista()" class="ui-btn ui-btn-icon-left ui-icon-carat-l">
+						<h2 id="titulo">Titulo</h2>
+						<p id="mensaje"><strong>Mensaje</strong></p>
+						<p id="curso">curso</p>
+						<p id="profesor">profesor</p>
+						<p id="fecha">fecha</p>
+					</a>
+				</div>
+			</div>
+  		</div>
+	</div> 
+</body>
+</html>

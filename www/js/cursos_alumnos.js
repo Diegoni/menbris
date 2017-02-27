@@ -1,7 +1,6 @@
 $(function() {
 	var url_back = getUrl();
-	$("#aceptar").hide();
-	$("#form_mensaje").hide();
+	$("#div_alumnos").hide();
 	$.ajax({
 	    type:"GET", 
 	    url: url_back+"index.php/Cursos/getCursos/1", 
@@ -26,8 +25,8 @@ $(function() {
 function getAlumnos(id)
 {
 	var url_back = getUrl();
-	$("#aceptar").show();
-	$("#form_mensaje").hide();
+	$("#div_alumnos").show();
+
 	var id_alumno = id;
 	
 	$.ajax({
@@ -56,7 +55,6 @@ function getAlumnos(id)
 
 function setMensaje()
 {
-	var url_back = getUrl();
 	var alumnos = "";
 	var id_curso = $("#curso").val();
 	var id_profesor = "1";
@@ -67,7 +65,8 @@ function setMensaje()
     });
 	
 	$.ajax({
-		url: url_back+"index.php/Mensajes/setAlumnos/", 
+		//url: "http://www.menbris.com.ar/menbrisBack/index.php/Mensajes/setAlumnos/", 
+		url: "http://localhost/benbrisBack/index.php/Mensajes/setAlumnos/", 
 		type: 'POST',
 		data : {
 			alumnos:alumnos,
@@ -87,13 +86,13 @@ function setMensaje()
 
 function guardarMensaje()
 {
-	var url_back = getUrl();
 	var id_mensaje = $("#id_mensaje").val();
 	var titulo = $("#titulo").val();
 	var mensaje = $("#mensaje").val();
 	
 	$.ajax({
-		url: url_back+"index.php/Mensajes/guardarMensaje/", 
+		//url: "http://www.menbris.com.ar/menbrisBack/index.php/Mensajes/guardarMensaje/", 
+		url: "http://localhost/benbrisBack/index.php/Mensajes/guardarMensaje/", 
 		type: 'POST',
 		data : {
 			id_mensaje:id_mensaje,

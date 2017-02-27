@@ -1,8 +1,8 @@
 $(function() {
+	var url_back = getUrl();
 	$.ajax({
 	    type:"GET", 
-	    url: "http://www.menbris.com.ar/menbrisBack/index.php/Alumnos/getAlumnos/1", 
-	    //url: "http://localhost/benbrisBack/index.php/Alumnos/getAlumnos/1", 
+	    url: url_back+"index.php/Alumnos/getAlumnos/1", 
 	    success: function(data) 
 	    {
 	    	$.each(data, function(index, element) {
