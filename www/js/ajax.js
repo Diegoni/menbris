@@ -25,7 +25,7 @@ $(function() {
 function mostrarMensaje(id)
 {
 	var id_mensaje = id;
-	
+	var url_back = getUrl();
 	$(".lista").hide(500);
 	$("#div_mensaje").show(500);
 	$.ajax({

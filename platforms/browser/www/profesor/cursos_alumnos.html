@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Listview - jQuery Mobile Demos</title>
+	<title>Menbris</title>
 	<link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
 	<link rel="stylesheet" href="../jqm/demos/css/themes/default/jquery.mobile-1.4.5.min.css">
@@ -38,26 +38,23 @@
 		<div data-role="main" class="ui-content">
 			<div role="main" class="ui-content jqm-content">
 				<h2 class="bandeja_entrada">Cursos Alumnos <a href="#myPanel" class="flotante ui-btn ui-btn-inline ui-corner-all ui-shadow ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b">Open Panel</a></h2>
-				<div id="form_alumnos">
+				<div id="d">
 					<label for="select-choice-0" class="select">Seleccione Curso:</label>
 					<select name="select-choice-0" id="curso" onchange="getAlumnos(this.value)">
 	
 					</select>
-					
-					<form>
-					<ul data-role="listview" data-inset="true" id="alumnos">
-					</ul>
-					<a data-role="button" data-theme="b" name="aceptar" onclick="setMensaje()" id="aceptar">Aceptar</a> 
-					</form>
 				</div>
 				
-				<div id="form_mensaje">
+				<div id="div_alumnos">
 					<form>
-					<input type="hidden" name="id_mensaje" id="id_mensaje" value="">
-					
 					<label for="basic">Alumno:</label>
 					<input type="text" name="alumno" id="alumno" value="">
-					<a data-role="button" data-theme="b" name="guardar" onclick="guardarMensaje()" id="aceptar">Guardar</a> 
+					<a data-role="button" data-theme="b" name="guardar" onclick="guardarMensaje()" id="aceptar">Registrar</a> 
+					
+					<ul data-role="listview" data-inset="true" id="alumnos">
+					</ul>
+					<input type="hidden" name="id_mensaje" id="id_mensaje" value="">
+					
 					</form>
 				</div>
 				

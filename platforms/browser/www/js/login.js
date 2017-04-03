@@ -6,10 +6,19 @@ $(document).ready(function()
     {
         var usu = $("#txtuser").val();
         var pass = $("#txtpassword").val();
+        var perfil = $("#txtperfil").val();
+        
         var url_post = url+'index.php/Usuarios/login/';
         
+        console.log(pass);
+        console.log(perfil);
+        
         $.post(url_post, 
-        	{ usu : usu, pass : pass},function(respuesta)
+        	{ 
+        		usu : usu, 
+        		pass : pass,
+        		perfil : perfil
+        	},function(respuesta)
         {
             if (respuesta == 1) 
             {

@@ -1,7 +1,6 @@
 $(function() {
 	var url_back = getUrl();
-	$("#aceptar").hide();
-	$("#form_mensaje").hide();
+	$("#div_alumnos").hide();
 	$.ajax({
 	    type:"GET", 
 	    url: url_back+"index.php/Cursos/getCursos/1", 
@@ -25,14 +24,14 @@ $(function() {
 
 function getAlumnos(id)
 {
-	$("#aceptar").show();
-	$("#form_mensaje").hide();
+	var url_back = getUrl();
+	$("#div_alumnos").show();
+
 	var id_alumno = id;
 	
 	$.ajax({
 	    type:"GET", 
-	    //url: "http://www.menbris.com.ar/menbrisBack/index.php/Cursos/getCursos/1",
-	    url: "http://localhost/benbrisBack/index.php/Cursos/getAlumnos/1", 
+	    url: url_back+"index.php/Cursos/getAlumnos/1", 
 	    success: function(data) 
 	    {
 	    	$( "#alumnos" ).empty();

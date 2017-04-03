@@ -1,0 +1,11 @@
+Menbris 01/02/17
+
+Profresor cambiar bandeja de entrada por mensajes enviados
+Limitar el tamaño de mensaje de los profesores
+Agregar un boton de eliminar todos
+Agregar fecha de eliminar curso
+Agregar tacho y ver alumnos
+Separar apellido y nombre del alumno
+Buscador de alumnos
+bandeja de entrada de padre solo nombre
+campo numerico en notas
